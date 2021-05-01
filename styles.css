@@ -1,129 +1,161 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 p {
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: larger;
-  width: auto;
+    font-family: "Bebas Neue", cursive;
+    font-size: x-large;
+    width: auto;
+    padding: 5px;
 }
 
 h1 {
-  width: auto;
+    font-family: "Bebas Neue", cursive;
+    font-size: 80px;
+    width: auto;
 }
 
 h3 {
-  width: auto;
+    font-family: "Bebas Neue", cursive;
+    width: auto;
+    font-size: 30px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px gray;
+}
+.section0 {
+    display: flex;
+    flex-direction: column;
 }
 
 .containerNav {
-  padding: 15px;
-  background-color: rgb(255 209 60 / 61%);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    padding: 15px;
+    background-color: rgb(255 209 60 / 61%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .BotonNav {
-  margin: 0 4px 0 4px;
-  border-color: transparent;
-  background-color: transparent;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: x-large;
-  font-style: initial;
-  color: rgb(54 108 154);
-  align-items: center;
-  justify-content: center;
+    margin: 0 4px 0 4px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: x-large;
+    font-style: initial;
+    color: rgb(54 108 154);
+    align-items: center;
+    justify-content: center;
 }
 
 .Buy {
-  size: 6px;
-  background-color: transparent;
-  border-color: transparent;
+    size: 6px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.UL-s0 {
+    min-height: 221px;
+    width: auto;
 }
 
 .IconoPokeom {
-  width: 200px;
+    width: 200px;
 }
 
 .BotonUL {
-  margin: 10px 0 0 0;
-  color: white;
-  height: 40px;
-  width: 300px;
-  border-radius: 10px;
-  background-color: rgb(33 111 177);
-  font-size: larger;
+    margin: 10px 0 0 0;
+    color: white;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(33 111 177);
+    box-shadow: 5px 5px black;
+    font-size: larger;
 }
 
-.section {
-  min-height: 500px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
+.section1 {
+    min-height: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Pedimon/img/pokemonBG2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.section .Titulos {
-  margin: 10px 0 10px 0;
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.h1secion {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px gray;
+    padding: 15px;
+    margin: 0 0 5px 0;
 }
 
-.section .container {
-  margin: 10px 0 10px 0;
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.section1 .Titulos {
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.section .tarjeta1 {
-  width: 400px;
-  margin: auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  min-height: 370px;
-  background-color: rgb(28, 88, 255);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgb(153 198 250);
-  padding: 9px;
+.section1 .container {
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.section .tarjeta2 {
-  width: 400px;
-  margin: auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  min-height: 370px;
-  background-color: rgba(255, 251, 1, 0.747);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
-  padding: 9px;
+.section1 .tarjeta1 {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 370px;
+    background-color: rgb(28, 88, 255);
+    align-items: center;
+    border: 3px black;
+    border-radius: 40px;
+    box-shadow: 5px 5px rgb(153 198 250);
+    padding: 9px;
 }
 
-.section .tarjeta3 {
-  width: 400px;
-  margin: auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  min-height: 370px;
-  background-color: rgb(241, 93, 8);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgb(240, 183, 151);
-  padding: 9px;
+.section1 .tarjeta2 {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 370px;
+    background-color: gold;
+    align-items: center;
+    border: 3px black;
+    border-radius: 40px;
+    box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
+    padding: 9px;
+}
+
+.section1 .tarjeta3 {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 370px;
+    background-color: rgb(241, 93, 8);
+    align-items: center;
+    border: 3px black;
+    border-radius: 40px;
+    box-shadow: 5px 5px rgb(240, 183, 151);
+    padding: 9px;
 }

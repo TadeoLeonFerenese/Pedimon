@@ -1,161 +1,218 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 p {
-    font-family: "Bebas Neue", cursive;
-    font-size: x-large;
-    width: auto;
-    padding: 5px;
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
+  width: auto;
+  padding: 5px;
 }
 
 h1 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 80px;
-    width: auto;
+  font-family: "Bebas Neue", cursive;
+  font-size: 80px;
+  width: auto;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  width: auto;
+  font-size: 30px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px gray;
 }
 
 h3 {
-    font-family: "Bebas Neue", cursive;
-    width: auto;
-    font-size: 30px;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    padding: 10px;
-    box-shadow: 5px 5px gray;
+  font-family: "Bebas Neue", cursive;
+  width: auto;
+  font-size: 30px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 5px gray;
 }
+
 .section0 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.containerNav {
-    padding: 15px;
-    background-color: rgb(255 209 60 / 61%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.section0 .containerNav {
+  padding: 15px;
+  background-color: rgb(255 209 60 / 61%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.BotonNav {
-    margin: 0 4px 0 4px;
-    border-color: transparent;
-    background-color: transparent;
-    font-family: "Nanum Gothic", sans-serif;
-    font-size: x-large;
-    font-style: initial;
-    color: rgb(54 108 154);
-    align-items: center;
-    justify-content: center;
+.section0 .BotonNav {
+  margin: 0 4px 0 4px;
+  border-color: transparent;
+  background-color: transparent;
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
+  font-style: initial;
+  color: rgb(54 108 154);
+  align-items: center;
+  justify-content: center;
 }
 
-.Buy {
-    size: 6px;
-    background-color: transparent;
-    border-color: transparent;
+.section0 .Buy {
+  size: 6px;
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.UL-s0 {
-    min-height: 221px;
-    width: auto;
+.section0 .UL-s0 {
+  min-height: 221px;
+  width: auto;
 }
 
-.IconoPokeom {
-    width: 200px;
+.section0 .IconoPokeom {
+  width: 200px;
 }
 
-.BotonUL {
-    margin: 10px 0 0 0;
-    color: white;
-    height: 40px;
-    width: 300px;
-    border-radius: 10px;
-    background-color: rgb(33 111 177);
-    box-shadow: 5px 5px black;
-    font-size: larger;
+.section0 .BotonUL {
+  margin: 10px 0 0 0;
+  color: white;
+  min-height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: rgb(33 111 177);
+  box-shadow: 5px 5px black;
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
 }
 
 .section1 {
-    min-height: 500px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    background-image: url(../Pedimon/img/pokemonBG2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  min-height: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../Pedimon/img/pokemonBG2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .h1secion {
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 5px 5px gray;
-    padding: 15px;
-    margin: 0 0 5px 0;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px gray;
+  padding: 15px;
+  margin: 0 0 5px 0;
 }
 
-.section1 .Titulos {
-    margin: 10px 0 10px 0;
-    padding: 10px 0 10px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Titulos {
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.section1 .container {
-    margin: 10px 0 10px 0;
-    padding: 10px 0 10px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.container {
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .section1 .tarjeta1 {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    min-height: 370px;
-    background-color: rgb(28, 88, 255);
-    align-items: center;
-    border: 3px black;
-    border-radius: 40px;
-    box-shadow: 5px 5px rgb(153 198 250);
-    padding: 9px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 370px;
+  background-color: rgb(28, 88, 255);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgb(153 198 250);
+  padding: 9px;
 }
 
 .section1 .tarjeta2 {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    min-height: 370px;
-    background-color: gold;
-    align-items: center;
-    border: 3px black;
-    border-radius: 40px;
-    box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
-    padding: 9px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 370px;
+  background-color: gold;
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
+  padding: 9px;
 }
 
 .section1 .tarjeta3 {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    min-height: 370px;
-    background-color: rgb(241, 93, 8);
-    align-items: center;
-    border: 3px black;
-    border-radius: 40px;
-    box-shadow: 5px 5px rgb(240, 183, 151);
-    padding: 9px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 370px;
+  background-color: rgb(241, 93, 8);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgb(240, 183, 151);
+  padding: 9px;
+}
+
+.section2 {
+  width: 100%;
+  min-height: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container2 {
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section2 .Buycard1 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color: gray;
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
+  padding: 9px;
+}
+
+.section2 .Boton {
+  margin: 10px 0 0 0;
+  color: white;
+  min-height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgb(33 111 177);
+  box-shadow: 5px 5px black;
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
 }

@@ -20,7 +20,7 @@ h1 {
 
 h2 {
   font-family: "Bebas Neue", cursive;
-  width: auto;
+  width: fit-content;
   font-size: 30px;
   background-color: whitesmoke;
   border-radius: 20px;
@@ -36,6 +36,22 @@ h3 {
   border-radius: 20px;
   padding: 10px;
   box-shadow: 5px 5px gray;
+}
+
+li {
+  font-family: "Bebas Neue", cursive;
+  font-size: x-large;
+  width: auto;
+  padding: 5px;
+  color: white;
+}
+
+.main {
+  background-image: url(../Pedimon/img/pokemonBG.jfif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .section0 {
@@ -95,10 +111,10 @@ h3 {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  background-image: url(../Pedimon/img/pokemonBG2.jpg);
+  /* background-image: url(../Pedimon/img/pokemonBG2.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .h1secion {
@@ -137,7 +153,7 @@ h3 {
   background-color: rgb(28, 88, 255);
   align-items: center;
   border: 3px black;
-  border-radius: 40px;
+  border-radius: 45%;
   box-shadow: 5px 5px rgb(153 198 250);
   padding: 9px;
 }
@@ -152,7 +168,7 @@ h3 {
   background-color: gold;
   align-items: center;
   border: 3px black;
-  border-radius: 40px;
+  border-radius: 45%;
   box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
   padding: 9px;
 }
@@ -167,7 +183,7 @@ h3 {
   background-color: rgb(241, 93, 8);
   align-items: center;
   border: 3px black;
-  border-radius: 40px;
+  border-radius: 45%;
   box-shadow: 5px 5px rgb(240, 183, 151);
   padding: 9px;
 }
@@ -215,4 +231,21 @@ h3 {
   box-shadow: 5px 5px black;
   font-family: "Bebas Neue", cursive;
   font-size: x-large;
+}
+
+.footer {
+  min-height: 500px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(54 108 154);
+}
+
+.container-footer {
+  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

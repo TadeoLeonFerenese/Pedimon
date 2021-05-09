@@ -10,6 +10,7 @@ p {
   font-size: x-large;
   width: auto;
   padding: 5px;
+  margin: 5px;
 }
 
 h1 {
@@ -26,6 +27,7 @@ h2 {
   border-radius: 20px;
   padding: 10px;
   box-shadow: 5px 5px gray;
+  margin-bottom: 5px;
 }
 
 h3 {
@@ -44,6 +46,7 @@ li {
   width: auto;
   padding: 5px;
   color: white;
+  margin: 5px;
 }
 
 .main {
@@ -213,11 +216,81 @@ li {
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: gray;
+  background-color: gold;
   align-items: center;
   border: 3px black;
   border-radius: 40px;
   box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
+  padding: 9px;
+}
+.section2 .Buycard2 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color: rgb(241, 93, 8);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(250, 171, 165, 0.747);
+  padding: 9px;
+}
+.section2 .Buycard3 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color: rgb(28, 88, 255);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(51, 58, 150, 0.747);
+  padding: 9px;
+}
+.section2 .Buycard4 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color: rgb(27, 189, 27);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(136, 243, 136, 0.747);
+  padding: 9px;
+}
+.section2 .Buycard5 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color:rgb(28, 88, 255);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(51, 58, 150, 0.747);
+  padding: 9px;
+}
+.section2 .Buycard6 {
+  width: 26%;
+  margin: auto auto 30px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  min-height: 370px;
+  background-color: rgb(241, 93, 8);
+  align-items: center;
+  border: 3px black;
+  border-radius: 40px;
+  box-shadow: 5px 5px rgba(250, 171, 165, 0.747);
   padding: 9px;
 }
 
@@ -233,8 +306,12 @@ li {
   font-size: x-large;
 }
 
+.section2 .img-buycard {
+  height: 175px;
+}
+
 .footer {
-  min-height: 500px;
+  min-height: 400px;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -248,4 +325,8 @@ li {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.ul-footer {
+  width: 20%;
 }

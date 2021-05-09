@@ -330,3 +330,11 @@ li {
 .ul-footer {
   width: 20%;
 }
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-height: 40px;
+}

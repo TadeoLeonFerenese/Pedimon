@@ -11,6 +11,7 @@ p {
   width: auto;
   padding: 5px;
   margin: 5px;
+  width: auto;
 }
 
 h1 {
@@ -55,22 +56,41 @@ li {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  filter: blur(500px);
+}
+
+.main * {
+  z-index: 2;
 }
 
 .section0 {
+  width: auto;
   display: flex;
   flex-direction: column;
 }
 
 .section0 .containerNav {
+  width: 100%;
   padding: 15px;
   background-color: rgb(255 209 60 / 61%);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .section0 .BotonNav {
+  width: 100%;
   margin: 0 4px 0 4px;
   border-color: transparent;
   background-color: transparent;
@@ -80,33 +100,70 @@ li {
   color: rgb(54 108 154);
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.section0 .IconoPokemon {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.divNAV {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .section0 .Buy {
+  width: 100%;
   size: 6px;
   background-color: transparent;
   border-color: transparent;
 }
 
-.section0 .UL-s0 {
-  min-height: 221px;
-  width: auto;
+.section0 .containerSlider {
+  padding: 30px;
+  background-color: rgb(255 209 60 / 61%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
 }
 
-.section0 .IconoPokeom {
-  width: 200px;
+.section0 .UL-s0 {
+  min-height: 221px;
+  width: 50%;
+  padding: 5px;
+}
+
+.imgSlider1 {
+  width: 70%;
+}
+
+.imgSlider2 {
+  width: 40%;
+  padding: 5px;
 }
 
 .section0 .BotonUL {
-  margin: 10px 0 0 0;
+  margin: 10px 0 15px 0;
   color: white;
   min-height: 40px;
-  width: 300px;
+  width: 70%;
+  padding: 5px;
   border-radius: 10px;
   background-color: rgb(33 111 177);
   box-shadow: 5px 5px black;
   font-family: "Bebas Neue", cursive;
   font-size: x-large;
+  border: none;
+  cursor: pointer;
 }
 
 .section1 {
@@ -114,10 +171,6 @@ li {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  /* background-image: url(../Pedimon/img/pokemonBG2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
 }
 
 .h1secion {
@@ -147,46 +200,46 @@ li {
 }
 
 .section1 .tarjeta1 {
-  width: 400px;
+  width: 25%;
   margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: rgb(28, 88, 255);
+  background-color: rgb(28 88 255 / 80%);
   align-items: center;
   border: 3px black;
-  border-radius: 45%;
+  border-radius: 40px;
   box-shadow: 5px 5px rgb(153 198 250);
   padding: 9px;
 }
 
 .section1 .tarjeta2 {
-  width: 400px;
+  width: 25%;
   margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: gold;
+  background-color: #ffd700ba;
   align-items: center;
   border: 3px black;
-  border-radius: 45%;
+  border-radius: 40px;
   box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
   padding: 9px;
 }
 
 .section1 .tarjeta3 {
-  width: 400px;
+  width: 25%;
   margin: auto;
   display: flex;
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: rgb(241, 93, 8);
+  background-color: rgb(241 93 8 / 80%);
   align-items: center;
   border: 3px black;
-  border-radius: 45%;
+  border-radius: 40px;
   box-shadow: 5px 5px rgb(240, 183, 151);
   padding: 9px;
 }
@@ -211,12 +264,12 @@ li {
 
 .section2 .Buycard1 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: gold;
+  background-color: #ffd700ba;
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -225,12 +278,12 @@ li {
 }
 .section2 .Buycard2 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: rgb(241, 93, 8);
+  background-color: rgb(241 93 8 / 80%);
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -239,12 +292,12 @@ li {
 }
 .section2 .Buycard3 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: rgb(28, 88, 255);
+  background-color: rgb(28 88 255 / 65%);
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -253,12 +306,12 @@ li {
 }
 .section2 .Buycard4 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: rgb(27, 189, 27);
+  background-color: rgb(27 189 27 / 80%);
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -267,12 +320,12 @@ li {
 }
 .section2 .Buycard5 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color:rgb(28, 88, 255);
+  background-color: rgb(28 88 255 / 65%);
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -281,12 +334,12 @@ li {
 }
 .section2 .Buycard6 {
   width: 26%;
-  margin: auto auto 30px auto;
+  margin-bottom: 30px;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
   min-height: 370px;
-  background-color: rgb(241, 93, 8);
+  background-color: rgb(241 93 8 / 80%);
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -304,13 +357,31 @@ li {
   box-shadow: 5px 5px black;
   font-family: "Bebas Neue", cursive;
   font-size: x-large;
+  border: none;
+  cursor: pointer;
 }
 
 .section2 .img-buycard {
   height: 175px;
 }
 
+/* .section2 .img-buycard::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  filter: opacity(1);
+}
+
+.img-buycard * {
+  z-index: 2;
+} */
+
 .footer {
+  width: 100%;
   min-height: 400px;
   padding: 15px;
   display: flex;
@@ -318,7 +389,12 @@ li {
   background-color: rgb(54 108 154);
 }
 
+.imgfooter {
+  width: 100%;
+}
+
 .container-footer {
+  width: 100%;
   margin: 10px 0 10px 0;
   padding: 10px 0 10px 0;
   display: flex;
@@ -332,9 +408,97 @@ li {
 }
 
 .iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  min-height: 40px;
+}
+
+@media (max-width: 800px) {
+  .section0 .containerNav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    min-height: 40px;
+    flex-wrap: wrap;
+  }
+
+  .section0 .IconoPokemon {
+    min-width: 95%;
+  }
+  .section0 .divNAV {
+    min-width: 100%;
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  .section0 .containerSlider {
+    width: 100%;
+    padding: 15px;
+    gap: 7px;
+  }
+
+  .section0 .imgSlider1 {
+    min-width: 100%;
+  }
+
+  .section1 .h1secion {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .section1 .container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .section1 .tarjeta1 {
+    width: 90%;
+  }
+  .section1 .tarjeta2 {
+    margin-top: 15px;
+    width: 90%;
+  }
+  .section1 .tarjeta3 {
+    margin-top: 15px;
+    width: 90%;
+  }
+
+  .container2 {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .Buycard1 {
+    min-width: 47%;
+    margin-right: 5px;
+  }
+  .Buycard2 {
+    min-width: 47%;
+    margin-left: 5px;
+  }
+  .Buycard3 {
+    min-width: 47%;
+    margin-right: 5px;
+  }
+  .Buycard4 {
+    min-width: 47%;
+    margin-left: 5px;
+  }
+  .Buycard5 {
+    min-width: 47%;
+    margin-right: 5px;
+  }
+  .Buycard6 {
+    min-width: 47%;
+    margin-left: 5px;
+  }
+
+  .container-footer {
+    flex-wrap: wrap;
+  }
+
+  .ul-footer {
+    width: 100%;
+  }
 }

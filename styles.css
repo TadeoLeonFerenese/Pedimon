@@ -8,7 +8,6 @@
 p {
   font-family: "Bebas Neue", cursive;
   font-size: x-large;
-  width: auto;
   padding: 5px;
   margin: 5px;
   width: auto;
@@ -113,14 +112,50 @@ li {
 }
 
 .divNAV {
-  width: 25%;
+  width: 41%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 }
 
+.nav-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ulBuy {
+  position: absolute;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  top: 110px;
+  right: 23px;
+  display: none;
+}
+
+.ulBuy-visible {
+  position: absolute;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  top: 110px;
+  right: 23px;
+}
+
+.liBuy {
+  display: block;
+  background: rgb(255 209 60 / 61%);
+}
+
 .section0 .Buy {
+  display: inline-block;
   width: 100%;
   size: 6px;
   background-color: transparent;
@@ -166,7 +201,13 @@ li {
   cursor: pointer;
 }
 
+.BotonUL:hover {
+  background-color: rgb(4 61 108);
+  width: 71%;
+}
+
 .section1 {
+  width: 100%;
   min-height: 500px;
   padding: 15px;
   display: flex;
@@ -361,24 +402,14 @@ li {
   cursor: pointer;
 }
 
+.Boton:hover {
+  background-color: rgb(4 61 108);
+  width: 81%;
+}
+
 .section2 .img-buycard {
   height: 175px;
 }
-
-/* .section2 .img-buycard::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: white;
-  filter: opacity(1);
-}
-
-.img-buycard * {
-  z-index: 2;
-} */
 
 .footer {
   width: 100%;
@@ -408,6 +439,7 @@ li {
 }
 
 .iconos {
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,7 +447,7 @@ li {
   min-height: 40px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
   .section0 .containerNav {
     display: flex;
     flex-wrap: wrap;
@@ -439,12 +471,16 @@ li {
   .section0 .imgSlider1 {
     min-width: 100%;
   }
-
+  .Titulos {
+    width: 100%;
+  }
   .section1 .h1secion {
+    width: 100%;
     font-size: 50px;
   }
 
   h3 {
+    width: 80%;
     font-size: 25px;
   }
 
@@ -470,27 +506,27 @@ li {
   }
 
   .Buycard1 {
-    min-width: 47%;
+    min-width: 90%;
     margin-right: 5px;
   }
   .Buycard2 {
-    min-width: 47%;
+    min-width: 90%;
     margin-left: 5px;
   }
   .Buycard3 {
-    min-width: 47%;
+    min-width: 90%;
     margin-right: 5px;
   }
   .Buycard4 {
-    min-width: 47%;
+    min-width: 90%;
     margin-left: 5px;
   }
   .Buycard5 {
-    min-width: 47%;
+    min-width: 90%;
     margin-right: 5px;
   }
   .Buycard6 {
-    min-width: 47%;
+    min-width: 90%;
     margin-left: 5px;
   }
 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/237bc6f334.js" crossorigin="anonymous"></script>
@@ -18,19 +19,26 @@
 
 
 <body>
-    <header>
+    <header class="section0">
+            
+        <nav class="containerNav">
 
-        <section class="section0">
-            <nav class="containerNav">
-
-        
-                <img class="IconoPokemon" src="../Pedimon/img/pedimon-logo.png" alt="Pokemon">
+        <img class="IconoPokemon" src="../Pedimon/img/pedimon-logo.png" alt="Pokemon">
                 
                 <div class="divNAV">
                     <button class="BotonNav">ABOUT</button>
                     <button class="BotonNav">CONTACT</button>
                     <button class="BotonNav">CARRITO</button>
-                    <button class="Buy"><i class="fas fa-shopping-cart" style="font-size: 2em;"></i></button>
+                    
+                    <button class="nav-toggle">
+                       <i class="fas fa-shopping-cart" style="font-size: 2em;"></i>
+                    </button>
+                    <ul class="ulBuy ulBuy-visible">
+                        <li class="liBuy">pokemon x $9999</li>
+                        <li class="liBuy">pokemon x $9999</li>
+                        <li class="liBuy">pokemon x $9999</li>
+                    </ul>
+                    
                 </div>
 
             </nav>
@@ -48,8 +56,6 @@
                 <img class="imgSlider2" src="../Pedimon/img/pikachu-hero.png" alt="pikachu-hero">
                 </img>
             </div>
-        </section>
-
     </header>
     <main class="main">
         <section class="section1">

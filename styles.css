@@ -73,6 +73,8 @@ li {
 }
 
 .section0 {
+  position: relative;
+  z-index: 30;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -413,6 +415,8 @@ li {
 }
 
 .footer {
+  position: relative;
+  z-index: 30;
   width: 100%;
   min-height: 400px;
   padding: 15px;
@@ -433,6 +437,10 @@ li {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.LiFooter {
+  list-style: none;
 }
 
 .ul-footer {

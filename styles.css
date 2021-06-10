@@ -122,7 +122,6 @@ li {
 }
 
 .nav-toggle {
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   padding: 10px;

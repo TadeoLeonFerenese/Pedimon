@@ -142,10 +142,16 @@ li {
 }
 
 .ulBuy-visible {
-  display: flex;
+  border-radius: 7px;
+  padding: 5px;
+
+  max-height: 206px;
+  background-color: black;
   position: absolute;
-  width: max-content;
+  text-align: center;
+  width: 55%;
   display: flex;
+  overflow-y: scroll;
   flex-direction: column;
   top: 100%;
   right: 23px;
@@ -153,7 +159,10 @@ li {
 
 .liBuy {
   display: block;
-  background: rgb(255 209 60 / 61%);
+  background: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
 }
 
 .section0 .Buy {

@@ -83,7 +83,7 @@ li {
 .section0 .containerNav {
   width: 100%;
   padding: 15px;
-  background-color: rgb(255 209 60 / 61%);
+  background-color: rgb(253 224 129);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -142,9 +142,8 @@ li {
 }
 
 .ulBuy-visible {
-  border-radius: 7px;
+  border-radius: 18px;
   padding: 5px;
-
   max-height: 206px;
   background-color: black;
   position: absolute;
@@ -157,12 +156,18 @@ li {
   right: 23px;
 }
 
+.ulBuy-visible::-webkit-scrollbar {
+  display: none;
+}
+
 .liBuy {
   display: block;
   background: #fff;
   padding: 10px;
   border-radius: 15px;
   color: black;
+  cursor: pointer;
+  border: none;
 }
 
 .section0 .Buy {
@@ -175,7 +180,7 @@ li {
 
 .section0 .containerSlider {
   padding: 30px;
-  background-color: rgb(255 209 60 / 61%);
+  background-color: rgb(253 224 129);
   display: flex;
   justify-content: space-around;
   align-items: center;

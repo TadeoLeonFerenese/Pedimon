@@ -19,14 +19,16 @@ h1 {
 }
 
 h2 {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Press Start 2P', cursive;
   width: fit-content;
-  font-size: 30px;
+  font-size: 14px;
   background-color: whitesmoke;
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 5px 5px gray;
-  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 14px 18px;
+  border: 4px solid black;
+  box-shadow: 4px 4px 0px black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -64,8 +66,8 @@ li {
   top: 0;
   left: 0;
   position: absolute;
-  background: #fff;
-  filter: blur(500px);
+  /* Reemplazamos el blur costoso por una capa blanca semitransparente */
+  background: rgba(255, 255, 255, 0.85); 
 }
 
 .main * {
@@ -82,43 +84,43 @@ li {
 
 .section0 .containerNav {
   width: 100%;
-  padding: 15px;
+  padding: 15px 30px; /* Un poco de padding a los lados */
   background-color: rgb(253 224 129);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between; /* El logo a la izq y los divs a la der */
   align-items: center;
-}
-
-.section0 .BotonNav {
-  padding: 10px;
-  margin: 0 4px 0 4px;
-  border-color: transparent;
-  background-color: transparent;
-  font-family: "Bebas Neue", cursive;
-  font-size: x-large;
-  font-style: initial;
-  color: rgb(54 108 154);
-  align-items: center;
-  justify-content: center;
-  border: none;
-  cursor: pointer;
 }
 
 .section0 .IconoPokemon {
-  width: 25%;
+  width: 250px; /* Tamaño fijo para que no sea inmenso */
+  max-width: 30%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* Alineado a la izquierda */
   padding: 10px;
 }
 
 .divNAV {
   position: relative;
-  width: 41%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end; /* Alineamos los botones a la derecha */
+  gap: 20px; /* Espaciado uniforme entre botones */
   align-items: center;
   padding: 10px;
+}
+
+.section0 .BotonNav {
+  padding: 10px;
+  background-color: transparent;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: rgb(54 108 154);
+  border: none;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.section0 .BotonNav:hover {
+  color: #0d3db8;
 }
 
 .nav-toggle {
@@ -129,6 +131,11 @@ li {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: rgb(54 108 154);
+}
+
+.nav-toggle:hover {
+  color: #0d3db8;
 }
 
 .ulBuy {
@@ -207,19 +214,25 @@ li {
   color: white;
   min-height: 40px;
   width: 70%;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 4px; /* Estilo retro píldora cuadrada */
   background-color: rgb(33 111 177);
-  box-shadow: 5px 5px black;
-  font-family: "Bebas Neue", cursive;
-  font-size: x-large;
-  border: none;
+  box-shadow: 4px 4px 0px black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  border: 4px solid black;
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .BotonUL:hover {
   background-color: rgb(4 61 108);
-  width: 71%;
+  /* NOTA: Eliminamos el width: 71% porque es lo que rompía la maquetación al hacer hover */
+}
+
+.BotonUL:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px black;
 }
 
 .section1 {
@@ -310,117 +323,133 @@ li {
 }
 
 .container2 {
-  margin: 10px 0 10px 0;
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 310px); /* Forzamos el ancho de cada columna */
+  gap: 125px; /* Separación de 125px para el espaciado perfecto */
+  justify-content: center; /* Centramos el bloque entero */
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 0;
 }
 
-.section2 .Buycard1 {
-  width: 26%;
-  margin-bottom: 30px;
+/* ESTILO ÚNICO: Menú Clásico (Blanco y Negro) con Stats */
+.section2 .Buycard1, .section2 .Buycard2, .section2 .Buycard3,
+.section2 .Buycard4, .section2 .Buycard5, .section2 .Buycard6 {
+  width: 95%; 
+  max-width: 310px; /* Aumentado de 280px para que sean un toque más grandes */
+  margin-bottom: 20px;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: #ffd700ba;
+  justify-content: flex-start;
   align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(243, 241, 136, 0.747);
-  padding: 9px;
-}
-.section2 .Buycard2 {
-  width: 26%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: rgb(241 93 8 / 80%);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(250, 171, 165, 0.747);
-  padding: 9px;
-}
-.section2 .Buycard3 {
-  width: 26%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: rgb(28 88 255 / 65%);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(51, 58, 150, 0.747);
-  padding: 9px;
-}
-.section2 .Buycard4 {
-  width: 26%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: rgb(27 189 27 / 80%);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(136, 243, 136, 0.747);
-  padding: 9px;
-}
-.section2 .Buycard5 {
-  width: 26%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: rgb(28 88 255 / 65%);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(51, 58, 150, 0.747);
-  padding: 9px;
-}
-.section2 .Buycard6 {
-  width: 26%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-  min-height: 370px;
-  background-color: rgb(241 93 8 / 80%);
-  align-items: center;
-  border: 3px black;
-  border-radius: 40px;
-  box-shadow: 5px 5px rgba(250, 171, 165, 0.747);
-  padding: 9px;
+  min-height: 400px;
+  padding: 15px 10px 10px 10px;
+  
+  /* Diseño Retro Blanco y Negro */
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 12px; /* Bordes un poco más suaves */
+  box-shadow: 8px 8px 0px black;
+  position: relative;
+  transition: transform 0.1s;
 }
 
+/* Borde doble interno para el estilo menú clásico */
+.section2 .Buycard1::after, .section2 .Buycard2::after, .section2 .Buycard3::after,
+.section2 .Buycard4::after, .section2 .Buycard5::after, .section2 .Buycard6::after {
+  content: "";
+  position: absolute;
+  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  border: 2px solid black;
+  pointer-events: none;
+}
+
+/* El icono de la pokebola (arriba a la derecha absoluto) */
+.img-pokeball {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 25px;
+  height: 25px;
+  image-rendering: pixelated;
+  z-index: 2;
+}
+
+/* Título (Nombre del Pokémon) */
+.section2 h2 {
+  font-size: 12px; /* Reducido de 14px */
+  margin-top: 5px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: black;
+  text-align: center;
+}
+
+/* Reajustamos la imagen del Pokémon */
+.section2 .img-buycard {
+  height: 120px; /* Reducido de 150px */
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.1));
+}
+
+/* Estadísticas y Detalles de Crianza */
+.pokemon-stats {
+  width: 90%;
+  text-align: center; /* Centramos el texto como pidió */
+  margin-top: auto; /* Empuja el grupo hacia abajo */
+  margin-bottom: 20px; /* Separación con el botón */
+  border-top: 2px dashed black;
+  padding-top: 15px; /* Más espacio arriba para separar de la imagen */
+}
+
+.pokemon-stats p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  line-height: 1.6;
+  color: black;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.pokemon-price {
+  font-size: 14px !important;
+  color: #1c58ff !important; /* Azul para resaltar el precio */
+  font-weight: bold;
+  margin-bottom: 10px !important;
+}
+
+.pokemon-stats strong {
+  color: #d32f2f;
+}
+
+/* Botón Clásico */
 .section2 .Boton {
-  margin: 10px 0 0 0;
+  margin-bottom: 15px; /* Un lindo margen abajo para despegar del borde */
   color: white;
   min-height: 40px;
-  width: 80%;
-  border-radius: 10px;
-  background-color: rgb(33 111 177);
-  box-shadow: 5px 5px black;
-  font-family: "Bebas Neue", cursive;
-  font-size: x-large;
-  border: none;
+  width: 90%;
+  border-radius: 4px;
+  background-color: #1c58ff;
+  box-shadow: 4px 4px 0px black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border: 4px solid black;
   cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .Boton:hover {
-  background-color: rgb(4 61 108);
-  width: 81%;
+  background-color: #0d3db8;
+}
+
+.Boton:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px black;
 }
 
 .section2 .img-buycard {

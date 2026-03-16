@@ -67,7 +67,7 @@ li {
   left: 0;
   position: absolute;
   /* Reemplazamos el blur costoso por una capa blanca semitransparente */
-  background: rgba(255, 255, 255, 0.85); 
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .main * {
@@ -84,26 +84,32 @@ li {
 
 .section0 .containerNav {
   width: 100%;
-  padding: 15px 30px; /* Un poco de padding a los lados */
+  padding: 15px 30px;
+  /* Un poco de padding a los lados */
   background-color: rgb(253 224 129);
   display: flex;
-  justify-content: space-between; /* El logo a la izq y los divs a la der */
+  justify-content: space-between;
+  /* El logo a la izq y los divs a la der */
   align-items: center;
 }
 
 .section0 .IconoPokemon {
-  width: 250px; /* Tamaño fijo para que no sea inmenso */
+  width: 250px;
+  /* Tamaño fijo para que no sea inmenso */
   max-width: 30%;
   display: flex;
-  justify-content: flex-start; /* Alineado a la izquierda */
+  justify-content: flex-start;
+  /* Alineado a la izquierda */
   padding: 10px;
 }
 
 .divNAV {
   position: relative;
   display: flex;
-  justify-content: flex-end; /* Alineamos los botones a la derecha */
-  gap: 20px; /* Espaciado uniforme entre botones */
+  justify-content: flex-end;
+  /* Alineamos los botones a la derecha */
+  gap: 20px;
+  /* Espaciado uniforme entre botones */
   align-items: center;
   padding: 10px;
 }
@@ -132,10 +138,15 @@ li {
   border: none;
   cursor: pointer;
   color: rgb(54 108 154);
+  /* Azul visible sobre el fondo amarillo */
+  transition: transform 0.2s, color 0.2s;
+  position: relative;
+  /* Crítico para el badge */
 }
 
 .nav-toggle:hover {
   color: #0d3db8;
+  transform: scale(1.1);
 }
 
 .ulBuy {
@@ -149,18 +160,22 @@ li {
 }
 
 .ulBuy-visible {
-  border-radius: 18px;
-  padding: 5px;
-  max-height: 206px;
-  background-color: black;
+  border-radius: 12px;
+  padding: 15px;
+  max-height: 500px;
+  background-color: white;
   position: absolute;
   text-align: center;
-  width: 55%;
+  width: 450px;
+  /* Más ancho como pidió el usuario */
   display: flex;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex-direction: column;
   top: 100%;
-  right: 23px;
+  right: 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  z-index: 1000;
 }
 
 .ulBuy-visible::-webkit-scrollbar {
@@ -168,13 +183,68 @@ li {
 }
 
 .liBuy {
-  display: block;
-  background: #fff;
-  padding: 10px;
-  border-radius: 15px;
-  color: black;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  color: #334155;
+  cursor: default;
   border: none;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.liBuy:hover {
+  background: #f1f5f9;
+}
+
+.liBuy img {
+  border-radius: 4px;
+}
+
+.liBuy-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.liBuy-name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.liBuy-price {
+  font-weight: bold;
+  color: #1c58ff;
+}
+
+.btn-pay-dropdown {
+  background-color: #f7e08b;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 4px 4px 0px black;
+  width: 100%;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-pay-dropdown:hover {
+  background-color: #fdd835;
+}
+
+.btn-pay-dropdown:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px black;
 }
 
 .section0 .Buy {
@@ -215,7 +285,8 @@ li {
   min-height: 40px;
   width: 70%;
   padding: 10px;
-  border-radius: 4px; /* Estilo retro píldora cuadrada */
+  border-radius: 4px;
+  /* Estilo retro píldora cuadrada */
   background-color: rgb(33 111 177);
   box-shadow: 4px 4px 0px black;
   font-family: 'Press Start 2P', cursive;
@@ -238,17 +309,33 @@ li {
 .section1 {
   width: 100%;
   min-height: 500px;
-  padding: 15px;
+  padding: 100px 15px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(33 111 177);
+
+  /* Agregamos esto para que "salte" por encima de la capa blanca */
+  position: relative;
+  z-index: 5;
 }
 
 .h1secion {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 5px 5px gray;
-  padding: 15px;
-  margin: 0 0 5px 0;
+  background-color: transparent;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 32px;
+  color: white;
+  text-shadow: 4px 4px 0px black;
+}
+
+.h2secion {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  color: white;
+  margin-top: 20px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  text-shadow: 4px 4px 0px black;
 }
 
 .Titulos {
@@ -258,6 +345,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .container {
@@ -276,7 +364,7 @@ li {
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: rgb(28 88 255 / 80%);
+  background-color: transparent;
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -291,7 +379,7 @@ li {
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: #ffd700ba;
+  background-color: transparent;
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -306,7 +394,7 @@ li {
   flex-flow: column;
   justify-content: center;
   min-height: 370px;
-  background-color: rgb(241 93 8 / 80%);
+  background-color: transparent;
   align-items: center;
   border: 3px black;
   border-radius: 40px;
@@ -317,26 +405,29 @@ li {
 .section2 {
   width: 100%;
   min-height: 500px;
-  padding: 15px;
+  padding: 80px 15px;
   display: flex;
   flex-direction: column;
 }
 
 .container2 {
   display: grid;
-  grid-template-columns: repeat(3, 310px); /* Forzamos el ancho de cada columna */
-  gap: 125px; /* Separación de 125px para el espaciado perfecto */
-  justify-content: center; /* Centramos el bloque entero */
+  grid-template-columns: repeat(3, 310px);
+  /* Forzamos el ancho de cada columna */
+  gap: 125px;
+  /* Separación de 125px para el espaciado perfecto */
+  justify-content: center;
+  /* Centramos el bloque entero */
   width: 100%;
   margin: 20px auto;
   padding: 10px 0;
 }
 
 /* ESTILO ÚNICO: Menú Clásico (Blanco y Negro) con Stats */
-.section2 .Buycard1, .section2 .Buycard2, .section2 .Buycard3,
-.section2 .Buycard4, .section2 .Buycard5, .section2 .Buycard6 {
-  width: 95%; 
-  max-width: 310px; /* Aumentado de 280px para que sean un toque más grandes */
+.section2 .Buycard {
+  width: 95%;
+  max-width: 310px;
+  /* Aumentado de 280px para que sean un toque más grandes */
   margin-bottom: 20px;
   display: flex;
   flex-flow: column;
@@ -344,22 +435,25 @@ li {
   align-items: center;
   min-height: 400px;
   padding: 15px 10px 10px 10px;
-  
+
   /* Diseño Retro Blanco y Negro */
   background-color: white;
   border: 4px solid black;
-  border-radius: 12px; /* Bordes un poco más suaves */
+  border-radius: 12px;
+  /* Bordes un poco más suaves */
   box-shadow: 8px 8px 0px black;
   position: relative;
   transition: transform 0.1s;
 }
 
 /* Borde doble interno para el estilo menú clásico */
-.section2 .Buycard1::after, .section2 .Buycard2::after, .section2 .Buycard3::after,
-.section2 .Buycard4::after, .section2 .Buycard5::after, .section2 .Buycard6::after {
+.section2 .Buycard::after {
   content: "";
   position: absolute;
-  top: 4px; left: 4px; right: 4px; bottom: 4px;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
   border: 2px solid black;
   pointer-events: none;
 }
@@ -377,7 +471,8 @@ li {
 
 /* Título (Nombre del Pokémon) */
 .section2 h2 {
-  font-size: 12px; /* Reducido de 14px */
+  font-size: 12px;
+  /* Reducido de 14px */
   margin-top: 5px;
   margin-bottom: 8px;
   background-color: transparent;
@@ -389,21 +484,26 @@ li {
 
 /* Reajustamos la imagen del Pokémon */
 .section2 .img-buycard {
-  height: 120px; /* Reducido de 150px */
+  height: 120px;
+  /* Reducido de 150px */
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
-  filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.1));
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.1));
 }
 
 /* Estadísticas y Detalles de Crianza */
 .pokemon-stats {
   width: 90%;
-  text-align: center; /* Centramos el texto como pidió */
-  margin-top: auto; /* Empuja el grupo hacia abajo */
-  margin-bottom: 20px; /* Separación con el botón */
+  text-align: center;
+  /* Centramos el texto como pidió */
+  margin-top: auto;
+  /* Empuja el grupo hacia abajo */
+  margin-bottom: 20px;
+  /* Separación con el botón */
   border-top: 2px dashed black;
-  padding-top: 15px; /* Más espacio arriba para separar de la imagen */
+  padding-top: 15px;
+  /* Más espacio arriba para separar de la imagen */
 }
 
 .pokemon-stats p {
@@ -417,7 +517,8 @@ li {
 
 .pokemon-price {
   font-size: 14px !important;
-  color: #1c58ff !important; /* Azul para resaltar el precio */
+  color: #1c58ff !important;
+  /* Azul para resaltar el precio */
   font-weight: bold;
   margin-bottom: 10px !important;
 }
@@ -428,7 +529,8 @@ li {
 
 /* Botón Clásico */
 .section2 .Boton {
-  margin-bottom: 15px; /* Un lindo margen abajo para despegar del borde */
+  margin-bottom: 15px;
+  /* Un lindo margen abajo para despegar del borde */
   color: white;
   min-height: 40px;
   width: 90%;
@@ -460,7 +562,6 @@ li {
   position: relative;
   z-index: 30;
   width: 100%;
-  min-height: 400px;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -511,6 +612,7 @@ li {
   .section0 .IconoPokemon {
     min-width: 95%;
   }
+
   .section0 .divNAV {
     min-width: 100%;
     margin-top: 5px;
@@ -526,12 +628,15 @@ li {
   .section0 .imgSlider1 {
     min-width: 100%;
   }
+
   .Titulos {
     width: 100%;
   }
+
   .section1 .h1secion {
     width: 100%;
     font-size: 50px;
+
   }
 
   h3 {
@@ -543,13 +648,16 @@ li {
     width: 100%;
     flex-wrap: wrap;
   }
+
   .section1 .tarjeta1 {
     width: 90%;
   }
+
   .section1 .tarjeta2 {
     margin-top: 15px;
     width: 90%;
   }
+
   .section1 .tarjeta3 {
     margin-top: 15px;
     width: 90%;
@@ -560,29 +668,9 @@ li {
     flex-wrap: wrap;
   }
 
-  .Buycard1 {
+  .Buycard {
     min-width: 90%;
-    margin-right: 5px;
-  }
-  .Buycard2 {
-    min-width: 90%;
-    margin-left: 5px;
-  }
-  .Buycard3 {
-    min-width: 90%;
-    margin-right: 5px;
-  }
-  .Buycard4 {
-    min-width: 90%;
-    margin-left: 5px;
-  }
-  .Buycard5 {
-    min-width: 90%;
-    margin-right: 5px;
-  }
-  .Buycard6 {
-    min-width: 90%;
-    margin-left: 5px;
+    margin: 10px auto;
   }
 
   .container-footer {
@@ -592,4 +680,195 @@ li {
   .ul-footer {
     width: 100%;
   }
+}
+
+/* --- NUEVOS ESTILOS SECCION 1 --- */
+.opciones-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+  padding: 0 300px 0 300px;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  text-align: center;
+}
+
+
+.card-agua,
+.card-electrico,
+.card-fuego {
+  background-color: transparent;
+}
+
+.icono-pixel {
+  display: block;
+  margin: 0 auto 15px auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  width: 8rem;
+  height: 8rem;
+}
+
+.card p {
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.4 !important;
+  font-family: 'Press Start 2P', cursive !important;
+  color: white !important;
+  text-shadow: 4px 4px 0px black;
+}
+
+@media (max-width: 760px) {
+  .opciones-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* --- ESTILILLOS PARA EL CARRITO --- */
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #d32f2f;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: none;
+  /* Se muestra por JS cuando hay items */
+  z-index: 10;
+}
+
+/* --- ESTILOS SECCION 3 (CARRITO) --- */
+.section3 {
+  width: 100%;
+  padding: 100px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.cart-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.cart-card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-title {
+  font-family: sans-serif;
+  color: #4a6fa5;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: transparent;
+  text-shadow: none;
+  border: none;
+  box-shadow: none;
+}
+
+.cart-subtitle {
+  font-family: sans-serif;
+  color: #8da9c4;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: sans-serif;
+  color: #4a6fa5;
+  font-size: 1.2rem;
+}
+
+.cart-item-price {
+  font-family: sans-serif;
+  color: #4a6fa5;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart-divider {
+  border: none;
+  border-top: 2px solid #e1e8ef;
+  margin: 30px 0;
+}
+
+.cart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cart-total-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #1c58ff;
+  margin-bottom: 20px;
+}
+
+.cart-total {
+  font-weight: bold;
+}
+
+.btn-finalize {
+  background-color: #f7e08b;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: fit-content;
+  align-self: center;
+}
+
+.btn-finalize:hover {
+  transform: scale(1.05);
 }

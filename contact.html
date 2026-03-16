@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pedimon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="section0">
+        <nav class="containerNav">
+            <a href="index.html">
+                <img class="IconoPokemon" src="./img/pedimon-logo.png" alt="Pokemon">
+            </a>
+            <div class="divNAV">
+                <button class="BotonNav" onclick="window.location.href='index.html'">INICIO</button>
+                <button class="BotonNav" onclick="window.location.href='contact.html'">CONTACT</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section1" style="min-height: auto; padding: 40px 15px;">
+            <div class="Titulos">
+                <h1 class="h1secion" style="font-size: 28px;">CONTACTO</h1>
+                <h2 class="h2secion">¿Tenés alguna duda? ¡Hablanos!</h2>
+            </div>
+        </section>
+
+        <section style="position: relative; z-index: 5; padding: 50px 15px; display: flex; justify-content: center;">
+            <div style="width: 100%; max-width: 900px; display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;">
+
+                <!-- Datos del Vendedor -->
+                <div class="cart-card" style="flex: 1; min-width: 300px;">
+                    <h1 class="cart-title" style="font-size: 1.8rem;">Datos del Vendedor</h1>
+                    <div style="text-align: left; padding: 20px; font-family: sans-serif; color: #4a6fa5; line-height: 2.2;">
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>🏪 Nombre:</strong> Pedimon Store
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>👤 Vendedor:</strong> Ash Ketchum
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>📍 Dirección:</strong> Calle Falsa 123, Pueblo Paleta
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>📞 Teléfono:</strong> +54 11 4222-2222
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>📧 Email:</strong> ash@pedimon.com
+                        </p>
+                        <p style="font-family: sans-serif; font-size: 1rem; color: #4a6fa5;">
+                            <strong>🕐 Horario:</strong> Lunes a Viernes 9:00 - 18:00
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="cart-card" style="flex: 1; min-width: 300px;">
+                    <h1 class="cart-title" style="font-size: 1.8rem;">Envianos un Mensaje</h1>
+                    <form style="display: flex; flex-direction: column; gap: 15px; padding: 20px; text-align: left;">
+                        <label style="font-family: 'Press Start 2P', cursive; font-size: 10px; color: #4a6fa5;">NOMBRE</label>
+                        <input type="text" placeholder="Tu nombre..." style="padding: 12px; border: 2px solid #e1e8ef; border-radius: 8px; font-family: sans-serif; font-size: 1rem; outline: none;">
+
+                        <label style="font-family: 'Press Start 2P', cursive; font-size: 10px; color: #4a6fa5;">EMAIL</label>
+                        <input type="email" placeholder="tu@email.com" style="padding: 12px; border: 2px solid #e1e8ef; border-radius: 8px; font-family: sans-serif; font-size: 1rem; outline: none;">
+
+                        <label style="font-family: 'Press Start 2P', cursive; font-size: 10px; color: #4a6fa5;">ASUNTO</label>
+                        <input type="text" placeholder="¿Sobre qué Pokémon querés preguntar?" style="padding: 12px; border: 2px solid #e1e8ef; border-radius: 8px; font-family: sans-serif; font-size: 1rem; outline: none;">
+
+                        <label style="font-family: 'Press Start 2P', cursive; font-size: 10px; color: #4a6fa5;">MENSAJE</label>
+                        <textarea placeholder="Escribí tu mensaje acá..." rows="5" style="padding: 12px; border: 2px solid #e1e8ef; border-radius: 8px; font-family: sans-serif; font-size: 1rem; outline: none; resize: vertical;"></textarea>
+
+                        <button type="button" class="btn-finalize" onclick="alert('¡Mensaje enviado! Te responderemos pronto.')" style="margin-top: 10px;">
+                            ENVIAR MENSAJE
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="Titulos">
+                <h1>
+                    <img class="imgfooter" src="./img/pedimon-text-white.png" alt="Pedimon">
+                </h1>
+            </div>
+            <div class="iconos">
+               <i class="fab fa-instagram" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-facebook-square" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-whatsapp-square" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-twitter-square" style="font-size: 2em; margin: 3px;"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

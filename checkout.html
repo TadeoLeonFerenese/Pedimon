@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Pedimon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        .checkout-section {
+            position: relative;
+            z-index: 5;
+            padding: 50px 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .checkout-wrapper {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .checkout-panel {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bank-info {
+            text-align: left;
+            padding: 20px;
+            font-family: sans-serif;
+            color: #4a6fa5;
+            line-height: 2.2;
+        }
+
+        .bank-info p {
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: #4a6fa5;
+        }
+
+        .pay-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .pay-label {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            color: #4a6fa5;
+        }
+
+        .pay-input {
+            padding: 12px;
+            border: 2px solid #e1e8ef;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .pay-input:focus {
+            border-color: #1c58ff;
+        }
+
+        .pay-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .pay-row > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .resumen-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f4f8;
+            font-family: sans-serif;
+            color: #4a6fa5;
+        }
+
+        .resumen-item img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .resumen-total {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            color: #1c58ff;
+            text-align: right;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="section0">
+        <nav class="containerNav">
+            <a href="index.html">
+                <img class="IconoPokemon" src="./img/pedimon-logo.png" alt="Pokemon">
+            </a>
+            <div class="divNAV">
+                <button class="BotonNav" onclick="window.location.href='index.html'">VOLVER A LA TIENDA</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section1" style="min-height: auto; padding: 40px 15px;">
+            <div class="Titulos">
+                <h1 class="h1secion" style="font-size: 28px;">FINALIZAR COMPRA</h1>
+                <h2 class="h2secion">Completá tus datos para recibir tu Pedimon</h2>
+            </div>
+        </section>
+
+        <section class="checkout-section">
+            <div class="checkout-wrapper">
+
+                <!-- Resumen de Compra -->
+                <div class="cart-card checkout-panel">
+                    <h1 class="cart-title" style="font-size: 1.8rem;">Resumen del Pedido</h1>
+                    <div id="checkout-resumen" style="padding: 10px 20px; text-align: left;">
+                        <p style="font-family: sans-serif; color: #8da9c4; text-align: center;">Cargando tu pedido...</p>
+                    </div>
+                    <hr class="cart-divider">
+                    <p id="checkout-total" class="resumen-total">Total: $0</p>
+
+                    <!-- Datos bancarios ficticios -->
+                    <hr class="cart-divider">
+                    <h1 class="cart-title" style="font-size: 1.4rem;">Datos Bancarios</h1>
+                    <div class="bank-info">
+                        <p><strong>🏦 Banco:</strong> Banco Pokémon S.A.</p>
+                        <p><strong>💳 CBU:</strong> 0720000088000012345678</p>
+                        <p><strong>📝 Alias:</strong> PEDIMON.STORE.POKEBALL</p>
+                        <p><strong>👤 Titular:</strong> Ash Ketchum</p>
+                        <p><strong>🆔 CUIT:</strong> 20-12345678-9</p>
+                    </div>
+                </div>
+
+                <!-- Formulario de Pago -->
+                <div class="cart-card checkout-panel">
+                    <h1 class="cart-title" style="font-size: 1.8rem;">Datos de Pago</h1>
+                    <form class="pay-form" onsubmit="return false;">
+                        <label class="pay-label">NOMBRE COMPLETO</label>
+                        <input class="pay-input" type="text" placeholder="Ash Ketchum">
+
+                        <label class="pay-label">EMAIL</label>
+                        <input class="pay-input" type="email" placeholder="tu@email.com">
+
+                        <label class="pay-label">NÚMERO DE TARJETA</label>
+                        <input class="pay-input" type="text" placeholder="4242 4242 4242 4242" maxlength="19">
+
+                        <div class="pay-row">
+                            <div>
+                                <label class="pay-label">VENCIMIENTO</label>
+                                <input class="pay-input" type="text" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div>
+                                <label class="pay-label">CVV</label>
+                                <input class="pay-input" type="text" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+
+                        <label class="pay-label">DNI DEL TITULAR</label>
+                        <input class="pay-input" type="text" placeholder="12.345.678">
+
+                        <button type="button" class="btn-finalize" style="margin-top: 20px; width: 100%;" onclick="confirmarPago()">
+                            CONFIRMAR PAGO
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="Titulos">
+                <h1>
+                    <img class="imgfooter" src="./img/pedimon-text-white.png" alt="Pedimon">
+                </h1>
+            </div>
+            <div class="iconos">
+               <i class="fab fa-instagram" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-facebook-square" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-whatsapp-square" style="font-size: 2em; margin: 3px;"></i>
+               <i class="fab fa-twitter-square" style="font-size: 2em; margin: 3px;"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Leer carrito de localStorage
+        const carrito = JSON.parse(localStorage.getItem('pedimon_carrito') || '[]');
+        
+        function renderResumen() {
+            const container = document.getElementById('checkout-resumen');
+            const totalEl = document.getElementById('checkout-total');
+            
+            if (carrito.length === 0) {
+                container.innerHTML = '<p style="font-family: sans-serif; color: #8da9c4; text-align: center;">Tu carrito está vacío. <a href="index.html" style="color: #1c58ff;">Volver a la tienda</a></p>';
+                totalEl.innerText = 'Total: $0';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+            for (let i = 0; i < carrito.length; i++) {
+                html += `
+                    <div class="resumen-item">
+                        <div style="display: flex; align-items: center;">
+                            <img src="${carrito[i].url_img}">
+                            <span style="text-transform: capitalize; font-weight: bold;">${carrito[i].nombre}</span>
+                        </div>
+                        <span style="font-weight: bold;">$${carrito[i].precio}</span>
+                    </div>
+                `;
+                total += carrito[i].precio;
+            }
+            container.innerHTML = html;
+            totalEl.innerText = `Total: $${total}`;
+        }
+
+        function confirmarPago() {
+            if (carrito.length === 0) {
+                alert('Tu carrito está vacío.');
+                return;
+            }
+            alert('¡Pago confirmado! 🎉\nTus Pokémon están en camino.\nGracias por comprar en Pedimon.');
+            localStorage.removeItem('pedimon_carrito');
+            window.location.href = 'index.html';
+        }
+
+        renderResumen();
+    </script>
+</body>
+
+</html>

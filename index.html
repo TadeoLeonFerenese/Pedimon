@@ -27,12 +27,13 @@
         <img class="IconoPokemon" src="./img/pedimon-logo.png" alt="Pokemon">
                 
                 <div class="divNAV">
-                    <button class="BotonNav">ABOUT</button>
-                    <button class="BotonNav">CONTACT</button>
-                    <button class="BotonNav">CARRITO</button>
+                    <!-- <button class="BotonNav">ABOUT</button> -->
+                    <button class="BotonNav" onclick="window.location.href='contact.html'">CONTACT</button>
+                    <button class="BotonNav" onclick="document.getElementById('section-carrito').scrollIntoView({behavior: 'smooth'})">CARRITO</button>
                     
                     <button class="nav-toggle">
-                       <i class="fas fa-shopping-cart" style="font-size: 2em;"></i>
+                       <span style="font-size: 2em; line-height: 1;">🛒</span>
+                       <span id="cart-count" class="cart-badge">0</span>
                     </button>
                     <ul class="ulBuy" id="carrito">
                         <!-- <li class="liBuy">Sin pokemones en el Carrito</li> -->
@@ -60,20 +61,20 @@
         <section class="section1">
             <div class="Titulos">
                 <h1 class="h1secion">¡NO TE QUEDES SIN TU PEDIMON!</h1>
-                <h3>AHORRATE HORAS ENTRENANDOLO POR TU PROPIA CUENTA</h3>
+                <h2 class="h2secion">AHÓRRATE HORAS ENTRENANDOLO POR TU PROPIA CUENTA - ¡AHORA MÁS SERVICIOS DISPONIBLES!</h2>
             </div>
-            <div class="container">
-                <div class="tarjeta1">
-                    <img src="./img/info-icon-1.png" alt="Tipo agua">
-                    <p style="color: whitesmoke;">Elegi tu chimpokomon aca abajo crack!</p>
+            <div class="opciones-container">
+                <div class="card card-agua">
+                    <img src="img/gotita_pixel.png" alt="Icono Agua Pixel Art" class="icono-pixel">
+                    <p>TU COMPAÑERO POKÉMON,<br> PERFECTAMENTE ENTRENADO.</p>
                 </div>
-                <div class="tarjeta2">
-                    <img src="./img/info-icon-2.png" alt="Tipo trueno">
-                    <p style="color: whitesmoke;">Elegi tu chimpokomon aca abajo crack!</p>
+                <div class="card card-electrico">
+                    <img src="img/trueno_pixel.png" alt="Icono Eléctrico Pixel Art" class="icono-pixel">
+                    <p>TU COMPAÑERO POKÉMON,<br> PERFECTAMENTE ENTRENADO.</p>
                 </div>
-                <div class="tarjeta3">
-                    <img src="./img/info-icon-3.png" alt="Tipo fuego">
-                    <p style="color: whitesmoke;">Elegi tu chimpokomon aca abajo crack!</p>
+                <div class="card card-fuego">
+                    <img src="img/fuego_pixel.png" alt="Icono Fuego Pixel Art" class="icono-pixel">
+                    <p>TU COMPAÑERO POKÉMON,<br> PERFECTAMENTE ENTRENADO.</p>
                 </div>
             </div>
         </section>
@@ -82,75 +83,28 @@
             <div class="Titulos">
                 <h1 class="h1secion">Los MAS VENDIDOS</h1>
             </div>
-            <div class="container2">
-                <div class="Buycard1">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Pikachu</h2>
-                    <img class="img-buycard" src="./img/Pikachu.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$350.00</p>
-                        <p><strong>IVS:</strong> 6x31 Perfetos</p>
-                        <p><strong>Mov. Huevo:</strong> Sorpresa, Placaje Eléc.</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('pikachu')">COMPRAR</button>
-                </div>
-                 <div class="Buycard2">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Charizard</h2>
-                    <img class="img-buycard" src="./img/Chorizard.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$1,200.00</p>
-                        <p><strong>IVS:</strong> 6x31 Perfetos</p>
-                        <p><strong>Mov. Huevo:</strong> Danza Dragón, Enfado</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('charizard')">COMPRAR</button>
-                </div>
-                <div class="Buycard3">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Squirtle</h2>
-                    <img class="img-buycard" src="./img/vamo a calmarno.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$450.00</p>
-                        <p><strong>IVS:</strong> 6x31 Perfetos</p>
-                        <p><strong>Mov. Huevo:</strong> Esfera Aural, Salpicar</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('Squirtle')">COMPRAR</button>
-                </div>
-                <div class="Buycard4">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Venusaur</h2>
-                    <img class="img-buycard" src="./img/venusaur.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$800.00</p>
-                        <p><strong>IVS:</strong> 5x31 (0 Atq)</p>
-                        <p><strong>Mov. Huevo:</strong> Gigadrenado, Drenadoras</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('Venasaur')">COMPRAR</button>
-                </div>
-                 <div class="Buycard5">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Totodile</h2>
-                    <img class="img-buycard" src="./img/totodile.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$500.00</p>
-                        <p><strong>IVS:</strong> 6x31 Perfetos</p>
-                        <p><strong>Mov. Huevo:</strong> Danza Dragón, Puño Hielo</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('Totodile')">COMPRAR</button>
-                </div>
-                <div class="Buycard6">
-                    <img class="img-pokeball" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt="Pokeball">
-                    <h2>Typhlosion</h2>
-                    <img class="img-buycard" src="./img/typhlosion.png" alt="Foto de Chimpokomon">
-                    <div class="pokemon-stats">
-                        <p class="pokemon-price">$750.00</p>
-                        <p><strong>IVS:</strong> 5x31 (0 Atq)</p>
-                        <p><strong>Mov. Huevo:</strong> Estallido, Paranormal</p>
-                    </div>
-                    <button class="Boton" onclick="agragarAlCarrito('Typhlosion')">COMPRAR</button>
-                </div>
+            <div class="container2" id="catalog-container">
+                <!-- Se cargará dinámicamente desde index.js -->
             </div>
 
+        <section class="section3" id="section-carrito">
+            <div class="cart-container">
+                <div class="cart-card">
+                    <h1 class="cart-title">CARRITO DE COMPRAS</h1>
+                    <p class="cart-subtitle">Su pedido lo espera: </p>
+                    
+                    <ul id="cart-items-list" class="cart-items">
+                        <!-- Los items se cargarán por JS -->
+                    </ul>
+
+                    <hr class="cart-divider">
+                    
+                    <div class="cart-footer">
+                        <p class="cart-total-text">Total: <span id="cart-total-value" class="cart-total">$0</span></p>
+                        <button class="btn-finalize" onclick="finalizarCompra()">FINALIZAR COMPRA</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -161,19 +115,7 @@
                     <img class="imgfooter" src="./img/pedimon-text-white.png" alt="Pedimon">
                 </h1>
             </div>
-            <div class="container-footer">
-                <ul class="ul-footer">
-                    <h2>CONTACTO</h2>
-                    <li class="LiFooter"><i class="fab fa-affiliatetheme"></i>4222-2222</li>
-                    <li class="LiFooter"><i class="fas fa-house-user"></i>Calle falsa 123</li>
-                </ul>
-                <ul class="ul-footer">
-                    <h2>LEGALES</h2>
-                    <p class="Pfooter">Ante cualquier problema cantarle a Gardel o tocar la pokeflauta,
-                        saracasaracasaaaaa saaaaaaaaaaaa sasaaasasaaaaa.
-                    </p>
-                </ul>
-            </div>
+
             <div class="iconos">
                <i class="fab fa-instagram" style="font-size: 2em; margin: 3px;"></i>
                <i class="fab fa-facebook-square" style="font-size: 2em; margin: 3px;"></i>

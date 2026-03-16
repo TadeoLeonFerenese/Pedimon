@@ -166,8 +166,8 @@ li {
   background-color: white;
   position: absolute;
   text-align: center;
-  width: 450px;
-  /* Más ancho como pidió el usuario */
+  width: 350px;
+  max-width: 90vw; /* Ajuste para móviles */
   display: flex;
   overflow-y: auto;
   flex-direction: column;
@@ -336,6 +336,7 @@ li {
   box-shadow: none;
   border: none;
   text-shadow: 4px 4px 0px black;
+  line-height: 1.6; /* Mejor espaciado */
 }
 
 .Titulos {
@@ -412,15 +413,13 @@ li {
 
 .container2 {
   display: grid;
-  grid-template-columns: repeat(3, 310px);
-  /* Forzamos el ancho de cada columna */
-  gap: 125px;
-  /* Separación de 125px para el espaciado perfecto */
+  grid-template-columns: repeat(auto-fit, 310px); /* Grid flexible */
+  gap: 40px; /* Gap más razonable */
   justify-content: center;
-  /* Centramos el bloque entero */
   width: 100%;
+  max-width: 1200px;
   margin: 20px auto;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 /* ESTILO ÚNICO: Menú Clásico (Blanco y Negro) con Stats */
@@ -558,6 +557,58 @@ li {
   height: 175px;
 }
 
+/* --- CLASES DE LAYOUT FLEXIBLE (Para Contacto y Checkout) --- */
+.flex-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flex-panel {
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .cart-card {
+    padding: 20px;
+  }
+  
+  .cart-title {
+    font-size: 1.8rem;
+  }
+  
+  .cart-item-info span {
+    font-size: 0.9rem;
+  }
+  
+  .cart-item-price {
+    font-size: 1rem;
+  }
+
+  .h1secion {
+    font-size: 24px;
+  }
+
+  .section1, .section3 {
+    padding: 50px 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section1 .h1secion {
+    font-size: 20px; /* Aún más pequeño para pantallas mini */
+  }
+  .h2secion {
+    font-size: 10px;
+  }
+}
+
 .footer {
   position: relative;
   z-index: 30;
@@ -629,14 +680,34 @@ li {
     min-width: 100%;
   }
 
+  .section0 .imgSlider2 {
+    display: none; /* Ocultar imagen de Pikachu en móviles */
+  }
+
+  .section0 .UL-s0 {
+    width: 100%; /* Que el texto y el botón ocupen todo el ancho */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section0 .BotonUL {
+    width: auto;
+    min-width: 250px;
+    font-size: 12px;
+    padding: 12px 20px;
+    white-space: nowrap; /* Forzar un solo renglón */
+  }
+
   .Titulos {
     width: 100%;
   }
 
   .section1 .h1secion {
     width: 100%;
-    font-size: 50px;
-
+    font-size: 28px; /* Reducido de 50px para que no explote en móviles */
+    line-height: 1.2;
   }
 
   h3 {
@@ -844,7 +915,7 @@ li {
 
 .cart-total-text {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Un poco más pequeño para móviles */
   color: #1c58ff;
   margin-bottom: 20px;
 }

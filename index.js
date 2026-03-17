@@ -154,3 +154,11 @@ function actualizarBadgeCarrito() {
     badge.style.display = "none";
   }
 }
+
+function reproducirSonidoPokemon() {
+  const pokemonIds = [1, 4, 7, 25, 150, 94, 149, 143, 6, 89, 130, 248, 3, 2, 65, 95, 38, 136, 135, 134, 133, 131];
+  const randomId = pokemonIds[Math.floor(Math.random() * pokemonIds.length)];
+  const audio = new Audio(`https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${randomId}.ogg`);
+  audio.volume = 0.5;
+  audio.play().catch(e => console.log("Error reproduciendo sonido:", e));
+}
